@@ -53,6 +53,7 @@ echo "We made it this far 3";
 $responseData = json_decode($response, TRUE);
 
 // Print the date from the response
+echo "\n". $ch;
 echo "publisheddata:";
 echo $response;
 
