@@ -25,24 +25,26 @@ $postHeader = array(
   'scope: ' . 'basic%20rs3094315'
 )
 
-$ch = curl_init('https://api.23andme.com/token/');
-curl_setopt_array($ch, array(
-    CURLOPT_POST => TRUE,
-    CURLOPT_RETURNTRANSFER => TRUE,
-    CURLOPT_HTTPHEADER => json_encode($postHeader)
-));
-$response = curl_exec($ch);
+if (!isset($_GET['scope']) {
 
-// Check for errors
-if($response === FALSE){
-    echo "ERROR";
-    die(curl_error($ch));
+        $ch = curl_init('https://api.23andme.com/token/');
+        curl_setopt_array($ch, array(
+            CURLOPT_POST => TRUE,
+            CURLOPT_RETURNTRANSFER => TRUE,
+            CURLOPT_HTTPHEADER => json_encode($postHeader)
+        ));
+        $response = curl_exec($ch);
+        
+        // Check for errors
+        if($response === FALSE){
+            echo "ERROR";
+            die(curl_error($ch));
+        }
+        
+        // Decode the response
+        $responseData = json_decode($response, TRUE);
+        
+        // Print the date from the response
+        echo $responseData['published'];
 }
-
-// Decode the response
-$responseData = json_decode($response, TRUE);
-
-// Print the date from the response
-echo $responseData['published'];
-
 ?>
