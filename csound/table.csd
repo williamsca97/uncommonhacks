@@ -34,7 +34,7 @@ endin
 </CsInstruments>
 <CsScore>
 
-; Table #1, a line from 200 to 2,000.
+; Table #1, an provided input file of a tonal spectrum.
 f 1 0 126 -23 "spectrum.txt";
 ; Table #2, a sine wave.
 f 2 0 16384 10 1
