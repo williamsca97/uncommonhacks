@@ -33,7 +33,7 @@ echo "We made it this far";
 
 
 
-        $ch = curl_init('https://api.23andme.com/token/' . ' -d client_id=' . $client_id . ' -d client_secret=' . $client_secret . "  -d grant_type=authorization_code -d code=zzz -d 'redirect_uri=https://localhost:5000/receive_code/' -d 'scope=basic%20rs3094315'");
+        $ch = curl_init('https://api.23andme.com/token&client_id=' . $client_id . '&client_secret=' . $client_secret . "&grant_type=authorization_code&code=' . $auth_code . '&redirect_uri=' . $redirect_URI . '&scope=basic%20rs3094315'");
         #);
         curl_setopt_array($ch, array(
             CURLOPT_POST => TRUE,
