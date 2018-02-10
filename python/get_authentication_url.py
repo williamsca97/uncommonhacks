@@ -24,10 +24,12 @@ def authenticate():
     auth_URL = URL_add_parameter(auth_URL, "client_id", api_id)
     auth_URL = URL_add_parameter(auth_URL, "scope", scope_list)
     # testing
-    print(auth_URL)
+    # print(auth_URL)
+    return auth_URL
 
 def main():
-    authenticate()
+    auth_URL = authenticate()
+    return auth_URL
 
 if __name__ == "__main__":
     main()
