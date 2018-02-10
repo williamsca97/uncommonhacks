@@ -15,8 +15,8 @@ def URL_add_parameter(prefix, param, value):
 
 def authenticate():
     # variables
-    redirect_URI = "http://localhost:5000/receive_code/"
-    scope_list = "basic names genome phenotypes:read:all"
+    redirect_URI = "http://connorw.me/projects/hackathon/thanks.html"
+    scope_list = "basic names genomes phenotypes:read:all"
     global api_id
     # construct authentication URL
     auth_URL = URL_init("api.23andme.com/authorize/")
