@@ -33,7 +33,9 @@ echo "We made it this far";
 
 
 
-        $ch = curl_init('https://api.23andme.com/token&client_id=' . $client_id . '&client_secret=' . $client_secret . "&grant_type=authorization_code&code=' . $auth_code . '&redirect_uri=' . $redirect_URI . '&scope=basic%20rs3094315'");
+        $ch = curl_init('https://api.23andme.com/token&client_id=' . $client_id . '&client_secret=' . $client_secret . '&grant_type=authorization_code&code=' . $auth_code . '&redirect_uri=' . $redirect_URI . '&scope=basic%20rs3094315');
+        $url = 'https://api.23andme.com/token&client_id=' . $client_id . '&client_secret=' . $client_secret . '&grant_type=authorization_code&code=' . $auth_code . '&redirect_uri=' . $redirect_URI . '&scope=basic%20rs3094315');
+
         #);
         curl_setopt_array($ch, array(
             CURLOPT_POST => TRUE,
@@ -49,13 +51,14 @@ echo "We made it this far";
             die(curl_error($ch));
         }
 echo "We made it this far 3";
-        // Decode the response
-        $responseData = json_decode($response, TRUE);
+// Decode the response
+$responseData = json_decode($response, TRUE);
 
-        // Print the date from the response
-        echo $responseData['published'];
+// Print the date from the response
+echo $url;
+echo "publisheddata:";
+echo $response;
 
 echo "Hello world";
 
 ?>
-
