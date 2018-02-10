@@ -10,6 +10,8 @@
 # The result will be in 23andMe file format.
 #
 
+# ATTRIBUTION: plashchynski on GitHub
+
 def flip_val(val)
   {
     'G' => 'C',
