@@ -15,7 +15,7 @@ def URL_add_parameter(prefix, param, value):
 
 def authenticate():
     # variables
-    redirect_URI = "http://connorw.me/projects/hackathon/thanks.html"
+    redirect_URI = "http://connorw.me/hackathon/uncommonhacks/thanks.html"
     scope_list = "basic names genomes phenotypes:read:all"
     global api_id
     # construct authentication URL
