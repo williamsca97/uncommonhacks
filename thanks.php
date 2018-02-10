@@ -25,11 +25,14 @@ $postHeader = array(
   'scope: ' . 'basic%20rs3094315'
 )
 
-$ch = curl_init('https://api.23andme.com/token/');
+$ch = curl_init('https://api.23andme.com/token/' . ' -d client_id=' . $client_id . ' -d client_secret=' . $client_secret . "  -d grant_type=authorization_code -d code=zzz -d 'redirect_uri=https://localhost:5000/receive_code/' -d 'scope=basic%20rs3094315'");
+\
+
+
+);
 curl_setopt_array($ch, array(
     CURLOPT_POST => TRUE,
     CURLOPT_RETURNTRANSFER => TRUE,
-    CURLOPT_HTTPHEADER => json_encode($postHeader)
 ));
 $response = curl_exec($ch);
 
