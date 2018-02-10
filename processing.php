@@ -49,13 +49,13 @@ echo "We made it this far";
             die(curl_error($ch));
         }
 echo "We made it this far 3";
-        // Decode the response
-        $responseData = json_decode($response, TRUE);
+// Decode the response
+$responseData = json_decode($response, TRUE);
 
-        // Print the date from the response
-        echo $responseData['published'];
+// Print the date from the response
+echo "publisheddata:";
+echo $responseData['published'];
 
 echo "Hello world";
 
 ?>
-
