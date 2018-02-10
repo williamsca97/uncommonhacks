@@ -33,6 +33,8 @@ echo "We made it this far";
 
 
 
+        $url = 'https://api.23andme.com/token/' . ' -d client_id=' . $client_id . ' -d client_secret=' . $client_secret . "  -d grant_type=authorization_code -d code=zzz -d 'redirect_uri=https://localhost:5000/receive_code/' -d 'scope=basic%20rs3094315'";
+
         $ch = curl_init('https://api.23andme.com/token/' . ' -d client_id=' . $client_id . ' -d client_secret=' . $client_secret . "  -d grant_type=authorization_code -d code=zzz -d 'redirect_uri=https://localhost:5000/receive_code/' -d 'scope=basic%20rs3094315'");
         #);
         curl_setopt_array($ch, array(
@@ -53,7 +55,7 @@ echo "We made it this far 3";
 $responseData = json_decode($response, TRUE);
 
 // Print the date from the response
-echo "\n". $ch;
+echo $url;
 echo "publisheddata:";
 echo $response;
 
