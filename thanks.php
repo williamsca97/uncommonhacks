@@ -1,9 +1,5 @@
-<!doctype HTML>
-<html>
-    <head>
-        <title>Authentication complete</title>
-    </head>
-    <body>
-        <p>Authentication has completed successfully.</p>
-    </body>
-</html>
+<?php 
+ECHO <<<HTML
+<p>You have successfully authenticated. Your authentication code is $_GET["code"].</p>
+HTML;
+?>
