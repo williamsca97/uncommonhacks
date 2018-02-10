@@ -47,4 +47,7 @@ if (!isset($_GET['scope']) {
         // Print the date from the response
         echo $responseData['published'];
 }
+
+echo "hello world";
+
 ?>
