@@ -1,6 +1,7 @@
 <?php
     $command = escapeshellcmd('python/get_authentication_url.py');
     $output = shell_exec($command);
+    echo $output; # testing
 ?>
 
 <html>
