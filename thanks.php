@@ -1,5 +1,3 @@
-<?php 
-ECHO <<<HTML
-<p>You have successfully authenticated. Your authentication code is $_GET['code'].</p>
-HTML;
+<?php
+echo 'You have successfully authenticated with our application. The authentication code is ' . htmlspecialchars($_GET["code"]) . '.';
 ?>
