@@ -50,7 +50,7 @@ $postHeader = array(
         $responseData = json_decode($response, TRUE);
 
         // Print the date from the response
-        #echo $responseData['published'];
+        echo $responseData['published'];
 
 
 
