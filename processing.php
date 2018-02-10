@@ -54,7 +54,7 @@ $responseData = json_decode($response, TRUE);
 
 // Print the date from the response
 echo "publisheddata:";
-echo $responseData['published'];
+echo $responseData;
 
 echo "Hello world";
 
